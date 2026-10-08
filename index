@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
 <meta name="theme-color" content="#1b2a6b">
-<title>Tafel-Octopus 🐙</title>
+<title>Tafel-Octopus voor Tom 🐙</title>
 <style>
 :root{--navy:#1b2a6b;--sea:#2b3f9e;--cream:#fff8e7;--ink:#14204f;--yellow:#ffd23f;--green:#2ecc8f;--red:#ff6b6b;
 --c5:#ff9f43;--c6:#ff6b9d;--c7:#a55eea;--c8:#1dd1a1;--c9:#54a0ff}
@@ -92,8 +92,8 @@ const prog=t=>{let s=0;for(let n=1;n<=10;n++)s+=Math.min(save[t+'x'+n]||0,2);ret
 const totalStars=()=>Object.values(save).reduce((a,v)=>a+Math.min(v,2),0);
 
 function home(){ G=null;
- app.innerHTML=`<div class="mascot">🐙</div><h1>Tafel-Octopus</h1><p class="sub">Oefen de tafels en verdien sterren!</p>
- <div class="panel"><h2>Welke tafels wil je oefenen?</h2><div class="chips">${[5,6,7,8,9].map(t=>
+ app.innerHTML=`<div class="mascot">🐙</div><h1>Tafel-Octopus voor Tom</h1><p class="sub">Oefen de tafels en verdien sterren!</p>
+ <div class="panel"><h2>Welke tafels wil je oefenen Tom?</h2><div class="chips">${[5,6,7,8,9].map(t=>
  `<div class="chip ${sel.has(t)?'on':''}" style="--col:${COL[t]}" data-t="${t}" role="button" tabindex="0"><b>${t}</b><small><i style="width:${prog(t)*100}%"></i></small></div>`).join('')}</div></div>
  <div class="modes">${Object.entries(MODES).map(([k,[i,n,d]])=>`<button class="mode" data-m="${k}"><span>${i}</span><div>${n}<small>${d}</small></div></button>`).join('')}</div>
  <div class="stars">⭐ ${totalStars()} sterren verzameld</div>
